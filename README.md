@@ -19,3 +19,17 @@ git add的反向命令git checkout，撤销工作区修改，即把暂存区最�
 
 git commit的反向命令git reset HEAD，就是把仓库最新版本转移到暂存区。
 
+你执行git init的文件夹叫工作区(work)，里面的隐藏目录.git是版本库，版本库里有暂存区(index)、默认分支(master)、默认指针(HEAD)。
+
+```c
+git add : work >> index
+git checkout : work << index
+git commit : index >> HEAD
+git reset HEAD : index << HEAD
+    
+git diff : diff work and stage 
+git diff -- cached : diff stage and HEAD
+git diff HEAD : diff work and HEAD
+```
+
+
