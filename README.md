@@ -1,7 +1,4 @@
 # learn_git
-2.first diff
-3.Working Directory,Stage and Repository
-
 tip:
 Git管理的文件分为：工作区，版本库，版本库又分为暂存区stage和暂存区分支master(仓库)
 
@@ -31,5 +28,20 @@ git diff : diff work and stage
 git diff -- cached : diff stage and HEAD
 git diff HEAD : diff work and HEAD
 ```
+###### 添加远程库
+tip:
+要关联一个远程库，使用命令
+```c
+git remote add origin git@server-name:path/repo-name.git；
+```
+关联后，使用命令第一次推送master分支的所有内容；
+```c
+git push -u origin master
+```
 
+以上2个命令在github上新建版本库后会告诉你。
+
+此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
+
+分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！
 
