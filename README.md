@@ -1,5 +1,7 @@
 # learn_git
-###### 本地文件管理
+[toc]
+
+## 本地文件管理
 tip:
 Git管理的文件分为：工作区，版本库，版本库又分为暂存区stage和暂存区分支master(仓库)
 你执行git init的文件夹叫工作区(work)，里面的隐藏目录.git是版本库，版本库里有暂存区(index)、默认分支(master)、默认指针(HEAD)。
@@ -31,7 +33,7 @@ git diff -- cached : diff stage and HEAD
 git diff HEAD : diff work and HEAD
 ```
 
-###### 本地版本管理
+## 本地版本管理
 
 
 HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。
@@ -47,7 +49,7 @@ git reflog
 ```
 
 
-###### 添加远程库
+## 添加远程库
 tip:
 要关联一个远程库，使用命令
 ```c
